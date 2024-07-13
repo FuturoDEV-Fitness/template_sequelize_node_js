@@ -1,11 +1,10 @@
 const { Router } = require('express')
+const LivroController = require('../controllers/LivroController')
 
 const routes = new Router()
 
 /* coloque  suas rotas aqui */
 
-routes.get('/', (request, response) => {
-    response.send("Bem vindo")
-})
+routes.get('/livros', LivroController.listaTodos)
 
 module.exports = routes
